@@ -18,6 +18,7 @@ services:
       - BLOCK_MEDIA=${BLOCK_MEDIA}
     networks:
       - backend
+      - dokploy-network
 
   api:
     <<: *common-service
