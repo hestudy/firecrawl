@@ -53,7 +53,7 @@ services:
       - 3002
     command: [ "pnpm", "run", "start:production" ]
 
-  worker:
+  firecrawl-worker:
     <<: *common-service
     environment:
       REDIS_URL: ${REDIS_URL:-redis://redis:6379}
