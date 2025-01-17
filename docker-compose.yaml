@@ -47,7 +47,6 @@ services:
       LOGGING_LEVEL: ${LOGGING_LEVEL}
       FLY_PROCESS_GROUP: app
     depends_on:
-      - firecrawl-redis
       - playwright-service
     expose:
       - 3002
@@ -81,7 +80,6 @@ services:
       LOGGING_LEVEL: ${LOGGING_LEVEL}
       FLY_PROCESS_GROUP: worker
     depends_on:
-      - firecrawl-redis
       - playwright-service
       - api
     command: [ "pnpm", "run", "workers" ]
